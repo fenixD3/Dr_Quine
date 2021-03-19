@@ -8,15 +8,15 @@ code_str db "; Outside comment%1$c%1$cglobal _main%1$cextern _printf%1$c%1$csect
 
 section .text
 _main:
-    enter 0, 0
-    lea rdi, [rel code_str]
-    ; Inside comment
-    mov rsi, 10
-    mov rdx, 34
-    lea rcx, [rel code_str]
-    call _printf
-    leave
-    call return
+enter 0, 0
+lea rdi, [rel code_str]
+; Inside comment
+mov rsi, 10
+mov rdx, 34
+lea rcx, [rel code_str]
+call _printf
+leave
+call return
 
 return:
-    ret
+ret
